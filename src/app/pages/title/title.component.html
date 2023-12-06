@@ -1,0 +1,19 @@
+<a (click)="passer()" >
+  <div class="title-item" (mouseenter)="playVideo()" (mouseleave)="stopVideo()">
+    <div *ngIf="videoPictire">
+    <iframe [class.thumbnail]="thumbnail" [src]="safeSrc" width="341" height="192" frameborder="0" webkitallowfullscreen mozallowfullscreen
+            allowfullscreen></iframe>
+    </div>
+    <div *ngIf="!videoPictire">
+      <img [src]="movie.coverUrl" [alt]="movie.coverAlt" />
+    </div>
+    <div class="items">
+      <div class="left-side">
+        <h2>{{ movie.name }}</h2>
+        <ul class="infos">
+          <li class="parts">{{ movie.categories[0] }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</a>

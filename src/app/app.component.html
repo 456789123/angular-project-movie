@@ -1,0 +1,8 @@
+<app-nav-bar
+  [opened]="menuOpened"
+  (menuToggle)="setMenuStage($event)"
+></app-nav-bar>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

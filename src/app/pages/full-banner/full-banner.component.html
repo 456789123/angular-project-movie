@@ -1,0 +1,23 @@
+<div class="row no-gutters">
+  <div class="col-12 full-banner text-white" style="background-image: url('{{movie.coverUrl}}')">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <h1 class="h3">{{movie.name}}</h1>
+          <small class="d-flex my-2">
+            <span class="mr-3">{{movie.year}}</span>
+            <span class="mr-3">{{movie.age}}</span>
+          </small>
+          <p class="d-none d-lg-block">
+            {{movie.resume}}
+          </p>
+          <a (click)="addDeleteMyList()" class="btn btn-primary text-uppercase font-weight-bold">{{buttonAddDeleteLabel}}</a>
+        </div>
+      </div>
+      <div class="p-4 d-flex justify-content-start h-100">
+        <iframe [class.thumbnail]="thumbnail" [src]="safeSrc" width="760" height="415" frameborder="0" webkitallowfullscreen mozallowfullscreen
+                allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
